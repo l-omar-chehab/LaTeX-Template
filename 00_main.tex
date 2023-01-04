@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+% Additional packages (added by omar)
+\usepackage{booktabs}    % to thicken table lines
+\usepackage{subcaption}  
+\usepackage{graphicx}    % to display figures
+\usepackage{xcolor}      % to use color
+
+% Convenient commands: for math
+\input{math_commands.tex}
+
+% Convenient commands: for editing
+\newcommand{\omar}[1]{\textcolor{blue}{#1}}
+
+\title{Template}
+\author{Omar Chehab}
+\date{January 2023}
+
+\begin{document}
+
+\maketitle
+
+% Sections
+\input{02_intro.tex}
+\input{03_background.tex}
+\input{04_theory.tex}
+\input{05_experiment.tex}
+\input{06_discussion.tex}
+\input{07_acknowledgements.tex}
+
+
+% Bibliography
+\vskip 0.2in
+\bibliography{paper}
+
+
+% Appendix
+\newpage
+\input{08_appendix.tex}
+
+
+\end{document}
