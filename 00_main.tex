@@ -2,10 +2,13 @@
 \usepackage[utf8]{inputenc}
 
 % Additional packages (added by omar)
-\usepackage{booktabs}    % to thicken table lines
-\usepackage{subcaption}  
-\usepackage{graphicx}    % to display figures
-\usepackage{xcolor}      % to use color
+\usepackage{booktabs}          % to thicken table lines
+\usepackage{graphicx}          % to display figures
+\usepackage{xcolor}            % to use color
+\usepackage{natbib}            % to manage the bibliography
+\bibliographystyle{unsrtnat}
+
+
 
 % Convenient commands: for math
 \input{math_commands.tex}
@@ -30,9 +33,14 @@
 \input{07_acknowledgements.tex}
 
 
+% Pointers on writing a good paper
+\newpage
+\input{98_pointers.tex}
+
+
 % Bibliography
 \vskip 0.2in
-\bibliography{paper}
+\bibliography{references}
 
 
 % Appendix
