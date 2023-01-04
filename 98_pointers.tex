@@ -2,7 +2,9 @@
 
 \section{Pointers on writing a good paper}
 
-\paragraph{Pointers on the writing style} A fluid writing style is what makes a paper accessible and memorable. It is very much a method. A few general pointers are
+The following is a collection of pointers on how to write a good paper. Many are originally comments made to me by my supervisors, Aapo Hyv{\"a}rinen and Alexandre Gramfort.
+
+\paragraph{Writing style} A fluid writing style is what makes a paper accessible and memorable. It is very much a method. A few general pointers are
 %
 \begin{itemize}
     
@@ -35,7 +37,7 @@ Here are more specific pointers on language:
 
 
 
-\paragraph{Pointers on technical vocabulary} Technical terms have different meanings for different scientific communities: any choice is fine so long as it is \textit{coherent}. Here are a few examples to keep in mind:
+\paragraph{Technical vocabulary} Technical terms have different meanings for different scientific communities: any choice is fine so long as it is \textit{coherent}. Choose one and stick to it! Here are a few examples to keep in mind:
 %
 \begin{itemize}
     
@@ -44,6 +46,95 @@ Here are more specific pointers on language:
 
     \item[] a \textbf{distribution}
     refers to a ``probability" distribution or normalized density in statistics. In mathematics, it refers to the more general concept of a ``Schwarz" distribution or generalized function.
+
+\end{itemize}
+%
+Again, coherence is key. For example, use either ``normalizing constant" or ``partition function", but not both interchangeably unless you have a very good reason to do so and then you must say that explicitly. 
+
+\paragraph{Formatting} Formatting is another tool for writing a good paper. It can be use to have ``increase space" when your submission is not long enough, \textit{e.g.}
+%
+\begin{align*}
+    \mathcal{L}(\vw) 
+    & =
+    \E_{\vx, y \sim p(\vx, \vy)} \big[ 
+    (y - \langle \vw, \vx \rangle)^2 
+    \big]
+    \\
+    \nabla_{\vw} \mathcal{L}(\vw) 
+    & =
+    -\E_{\vx, y \sim p(\vx, \vy)} \big[ 
+    (y - \langle \vw, \vx \rangle) \vx
+    \big]
+\end{align*}
+%
+or to ``reduce space" when your submission is too long, \textit{e.g.}
+%
+\begin{alignat*}{2}
+    \mathcal{L}(\vw) 
+    =
+    \E_{\vx, y \sim p(\vx, \vy)} \big[ 
+    (y - \langle \vw, \vx \rangle)^2 
+    \big]
+    %
+    \hspace{1em}
+    %
+    \nabla_{\vw} \mathcal{L}(\vw) 
+    =
+    -\E_{\vx, y \sim p(\vx, \vy)} \big[ 
+    (y - \langle \vw, \vx \rangle) \vx
+    \big]
+    \enspace .
+\end{alignat*}
+%
+More importantly, formatting equations well make them much easier to read. Make sure they read as part of the text: if they end a sentence, insert a period as in the above equation. Do not hesitate to add extra ``\%" between paragraphs and equations: it creates visual space in the tex file for readability, without separating blocks in the pdf output with automatic indentation. 
+
+
+\paragraph{Notation} Mathematical notation can afford no ambiguity. Is is also convenient to use the simplest notation, in the sense that it is easy to read. Here are a few examples
+%
+\begin{itemize}
+
+    \item [] $\nabla_{\vtheta} \log p(x, \vtheta^*)$ is both clear and easier to read than $\nabla_{\vtheta} \log p(x, \vtheta)|_{\vtheta^*}$ 
+
+    \item [] $\E_{\vx \sim q(x)}[f(\vx, \vy)]$ is clearer than $\E_{q(x)}[f(\vx, \vy)]$
     
 \end{itemize}
 
+
+\paragraph{Editing process} The following have served me as ``good practices" to facilitate the editing process
+%
+\begin{itemize}
+
+    \item[] \textbf{Sections}
+    When editing, separate different sections in different files (\textit{e.g.} 01\_abstract.tex, 02\_intro.tex, etc.) as in this template. This helps track the progress of each section separately and divide up work if necessary. In the final version, copy-paste all the content into the single main file.
+    
+    \item[] \textbf{Comments}
+     To insert comments ``in the margins" that do not render visually, use the overleaf option of selecting text and then pressing on ``add comment". To highlight changes you have made, use a macro to \omar{write them in color}. In the final version, you can simply modify the macro to render in black. To remove text during the editing, it is better to comment out than to delete, which is irreversible and also harsh to your co-authors: wait for the final version to actually delete the comments.
+         
+    \item[] \textbf{Equations}
+    When editing, leave all equations numbered, like this
+    %
+    \begin{align*}
+        f(\vx) & = \| \vx \|^2
+        \\
+        g(\vx) & = \| \vx \|
+        \label{eq:norms}
+        \numberthis
+    \end{align*}
+    %
+    and preferably labelled if they will be referred to later in the text like this~\eqref{eq:norms}. The numbering is very useful when editing a paper as it will allow you to refer to an equation specifically, as opposed to ``the one after the third paragraph of Section 3", for example. In the end version only, you may retain numbering for the main equations. Even then, being generous in the numbering will allow you and colleagues to refer specifically to certain parts of the paper in a future correspondence. 
+
+\end{itemize}
+
+\paragraph{Bibliography} Over the years, build a bibliography where the bibtex citations are formatted in a way that is coherent and clean. While you may draw inspiration from ``references.bib", I will single out a few pointers
+%
+\begin{itemize}
+
+    \item Deciding on a convention to write author names, \textit{e.g.} O. Chehab
+
+    \item Naming the papers following a common convention: name, year, idea. For example, Pihlaja's 2010 paper on Noise-Contrastive Estimation is named ``pihlaja2010nce". 
+
+    \item Grouping papers by theme
+
+\end{itemize}
+%
+Do this early and build up a nice, clean bibliography. This will serve you \textit{repeatedly} across articles and avoid manually cleaning up your .bib file every time. Additionally, a nice .bib file can serve as a nice way to log all the literature you have read: skimming through it can refresh your memory every now and then.

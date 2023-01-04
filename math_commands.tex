@@ -2,8 +2,10 @@
 
 \usepackage{amsmath,amsfonts,bm}
 
-% Reference to an equation, lower-case.
-\def\eqref#1{Eq.~\ref{#1}}
+% Equations
+\def\eqref#1{Eq.~\ref{#1}}   % refer to an equation
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}       % add manual numbering
+
 
 \def\eps{{\epsilon}}
 
