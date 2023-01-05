@@ -1,4 +1,153 @@
 % !TEX root = 00_main.tex
 
+\newcommand{\pd}{{\color{black} p_d}}
+\newcommand{\pn}{{\color{black} p_n}}
+
 \section{Introduction}
 \label{sec:intro}
+
+
+In this manuscript, we compare the optimal and model classifiers by their respective density ratios, respectively $f = \frac{\pd}{\nu \pn}$ and $g = \frac{p_{\vbeta}}{\nu \pn}$. The Bregman divergence becomes
+%
+\begin{align*}
+    D_{\phi} \left(
+    \frac{\pd}{\nu \pn}
+    , 
+    \frac{p_{\vbeta}}{\nu \pn}
+    \right)
+    &=
+    H \left( 
+    \frac{\pd}{\nu \pn} 
+    \right) 
+    + 
+    H \left( 
+    \frac{\pd}{\nu \pn}
+    ,
+    \frac{p_{\vbeta}}{\nu \pn}
+    \right) 
+\end{align*}
+%
+when integration is performed with respect to the weighted noise $\lambda(\vx) = \nu \pn(\vx)$. The cross-entropy defines a classification loss 
+%
+\begin{align*}
+    H \left( 
+    \frac{\pd}{\nu \pn}
+    ,
+    \frac{p_{\vbeta}}{\nu \pn}
+    \right) 
+    &=
+    \nu \E_n
+    \bigg[
+    S_0
+    \bigg(
+    \frac{p_\vbeta}{\nu \pn}
+    \bigg)
+    \bigg]
+    -
+    \E_d
+    \bigg[
+    S_1
+    \bigg(
+    \frac{p_\vbeta}{\nu \pn}
+    \bigg)
+    \bigg]
+\end{align*}
+%
+after expanding, where for notational convenience we use $(S_0, S_1)$ which are two nonlinearities coupled by
+%
+\begin{alignat*}{2}
+    S_0(g) = -\phi(g) + \phi'(g)g  
+    %
+    \hspace{2em}
+    %
+    S_1(g) = \phi'(g)
+    % \label{eq:bregman_nonlins}
+\end{alignat*}
+%
+\noindent or conversely
+%
+\begin{align*}
+    \phi(g) &= S_1(g) x - S_0(g)
+    \enspace .
+\end{align*}
+%
+NCE minimizes that classification loss. Different values of $\phi$ define different classification losses. 
+% 
+Note that by introducing dual coordinates to $(f, g)$ via convex duality
+%
+\begin{alignat*}{2}
+    f_{\mathrm{dual}} = \phi^{'}(f)
+    %
+    \hspace{2em}
+    %
+    g_{\mathrm{dual}} =  \phi^{'}(g)
+\end{alignat*}
+%
+we may rewrite the nonlinearities with these new coordinates
+%
+\begin{alignat*}{2}
+    S_0(g) 
+    & = 
+    -\phi(g) + g_{\mathrm{dual}} \times g  
+    %
+    \hspace{2em}
+    %
+    S_1(g) 
+    & = 
+    g_{\mathrm{dual}} 
+    \\
+    {}
+    & = 
+    \phi_{\mathrm{dual}}(g_{\mathrm{dual}})
+    % \label{eq:bregman_nonlins}
+\end{alignat*}
+%
+so that the cross-entropy becomes
+%
+\begin{align*}
+    H \left( 
+    \frac{\pd}{\nu \pn}
+    ,
+    \frac{p_{\vbeta}}{\nu \pn}
+    \right) 
+    & =
+    \nu \E_n
+    \bigg[
+    \phi_{\mathrm{dual}}(g_{\mathrm{dual}})
+    \bigg]
+    -
+    \E_d
+    \bigg[
+    g_{\mathrm{dual}} 
+    \bigg]
+    \\
+    & =
+    \nu \E_n
+    \bigg[
+    \phi_{\mathrm{dual}}(g_{\mathrm{dual}})
+    -
+    g_{\mathrm{dual}} 
+    \frac{\pd}{\nu \pn}
+    \bigg]
+    \\
+    & =
+    \nu \E_n
+    \bigg[
+    \phi_{\mathrm{dual}}(g_{\mathrm{dual}})
+    -
+    g_{\mathrm{dual}} 
+    f
+    \bigg]
+\end{align*}
+%
+which is the dual approximation to the entropy $H \left( 
+\frac{\pd}{\nu \pn} 
+\right) 
+:=
+\nu \E_n
+\big[
+\phi
+\big(
+\frac{\pd}{\nu \pn}
+\big)
+\big]$.
