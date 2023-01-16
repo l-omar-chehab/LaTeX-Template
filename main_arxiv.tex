@@ -1,0 +1,68 @@
+\documentclass[11pt]{article}
+
+% Style package (arxiv or publication)
+\usepackage{arxiv}
+
+% Convenient commands: for math
+\input{math_commands.tex}
+
+% Convenient commands: for editing
+\newcommand{\omar}[1]{\textcolor{blue}{#1}}
+
+
+\begin{document}
+
+\title{Template}
+\date{}
+
+\author{
+    Omar Chehab$^{1}$
+    \footnote{
+    Corresponding author \href{mailto:l-emir-omar.chehab@inria.fr}{l-emir-omar.chehab@inria.fr}},
+    %
+    {Alexandre Gramfort}$^1$,
+    %
+    {Aapo Hyvarinen}$^{2}$ \\ [.8em]
+    $^1${Universit\'e Paris-Saclay, Inria, CEA} \\
+    $^2$University of Helsinki, Helsinki, Finland \\
+}
+
+\maketitle
+
+\begin{abstract}
+    \input{01_abstract.tex}
+    \noindent \textbf{Keywords}:
+    Energy-Based Models, Contrastive Learning, Noise-Contrastive Estimation, Self-Supervised Learning, Estimation Theory, Importance Sampling
+\end{abstract}
+
+
+
+% To get an overview of the different sections
+% \tableofcontents
+
+
+% Sections
+\input{02_intro.tex}
+\input{03_background.tex}
+\input{04_theory.tex}
+\input{05_experiment.tex}
+\input{06_discussion.tex}
+\input{07_acknowledgements.tex}
+
+
+% Bibliography
+\vskip 0.2in
+\bibliography{references}
+
+
+% Appendix
+\newpage
+\input{08_appendix.tex}
+
+
+% Pointers on writing a good paper
+\newpage
+\input{98_pointers.tex}
+
+
+\end{document}

@@ -1,6 +1,13 @@
 % Shortcuts for mathematical notations
 
+% Load packages for math
 \usepackage{amsmath,amsfonts,bm}
+% Load packages for figures
+\usepackage{booktabs}          % to thicken table lines
+\usepackage{graphicx}          % to display figures
+\usepackage{subcaption}        % to use captions in subfigures
+
+
 
 % Equations
 \def\eqref#1{Eq.~\ref{#1}}   % refer to an equation
@@ -101,3 +108,7 @@
 \DeclareMathOperator*{\minimize}{minimize~}
 \DeclareMathOperator*{\maximize}{maximize~}
 \DeclareMathOperator*{\subjectto}{subject~to~}
+
+
+% Code
+\newcommand\code[1]{\fcolorbox{white}{gray!15}{\color[rgb]{0,.3,.6}\texttt{#1}}}

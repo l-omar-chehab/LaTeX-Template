@@ -1,0 +1,24 @@
+% Arxiv Style file
+
+\ProvidesPackage{arxiv}[2023/16/01 Custom Package]
+
+% to encode the latex document nicely
+\usepackage[utf8]{inputenc}
+% to set margins
+\usepackage[a4paper, total={6in, 8in}]{geometry}  
+% to manage the bibliography
+\usepackage{natbib}   
+\bibliographystyle{unsrtnat}
+% use color
+\usepackage{xcolor}
+% use hyperlinks with color
+\usepackage{hyperref}
+\definecolor{linkcolor}{RGB}{83,83,182}
+\definecolor{darkred}{RGB}{126,42,92}
+\hypersetup{
+	colorlinks=true,
+	citecolor=linkcolor,
+	linkcolor=linkcolor}
+
+% End of the package
+\endinput
