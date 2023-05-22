@@ -1,13 +1,16 @@
 % Shortcuts for mathematical notations
 
 % Load packages for math
-\usepackage{amsmath,amsfonts,bm}
+\usepackage{amsmath,amsfonts,bm,amssymb}
+% Load packages for theorems
+\usepackage{amsthm}
 % Load packages for figures
 \usepackage{booktabs}          % to thicken table lines
 \usepackage{graphicx}          % to display figures
 \usepackage{subcaption}        % to use captions in subfigures
-
-
+\usepackage{multirow}        % to merge cells vertically
+\usepackage{stmaryrd}        % double brackets for integer intervals
+\usepackage{yhmath}        % really \widehat{}
 
 % Equations
 \def\eqref#1{Eq.~\ref{#1}}   % refer to an equation
@@ -26,6 +29,9 @@
 \def\vBeta{{\bm{\Beta}}}
 \def\vpsi{{\bm{\psi}}}
 \def\valpha{{\bm{\alpha}}}
+\def\vlambda{{\bm{\lambda}}}
+\def\veta{{\bm{\eta}}}
+\def\vX{{\bm{X}}}
 \def\va{{\bm{a}}}
 \def\vb{{\bm{b}}}
 \def\vc{{\bm{c}}}
@@ -84,6 +90,11 @@
 \def\mPhi{{\bm{\Phi}}}
 \def\mLambda{{\bm{\Lambda}}}
 \def\mSigma{{\bm{\Sigma}}}
+\def\mId{{\textbf{Id}}}
+\def\mPi{{\bf{\Pi}}}
+\def\trace{{\text{trace}}}
+\def\vec{{\text{vec}}}
+
 
 
 % Statistics
@@ -92,7 +103,7 @@
 \newcommand{\Var}{\mathrm{Var}}
 \newcommand{\Cov}{\mathrm{Cov}}
 \newcommand{\simiid}{\overset{\mathrm{iid}}{\sim}}
-\newcommand{\equivto}[1]{\underset{#1}{\sim}}
+\newcommand{\simlimit}[1]{\underset{#1}{\sim}}
 \newcommand{\ptheta}[1][\,\cdot\,]{{\color{black} p(#1; \vtheta)}}
 
 
@@ -113,3 +124,21 @@
 
 % Code
 \newcommand\code[1]{\fcolorbox{white}{gray!15}{\color[rgb]{0,.3,.6}\texttt{#1}}}
+
+
+% Theorem (sometimes already defined for conference format)
+\newtheoremstyle{mythmstyle} 
+{\topsep}    %Space above
+{\topsep}    %Space below
+{\itshape}   %Body font
+{0pt}        %Indent amount
+{\bfseries}  % Theorem head font
+{}           %Punctuation after theorem head
+{ }          %Space after theorem head
+{}           % theorem head specification
+\theoremstyle{mythmstyle}
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{lemma}{Lemma}
+
+

@@ -172,6 +172,12 @@
 	publisher    = {Omnipress},
 	pages        = {419–426}
 }
+@inproceedings{liu2015ais,
+  title={Estimating the Partition Function by Discriminance Sampling},
+  author={Q. Liu and J. Peng and A.T. Ihler and J.W. Fisher III},
+  booktitle={Uncertainty in Artificial Intelligence (UAI)},
+  year={2015}
+}
 @article{uehara2018nce,
 	title        = {Analysis of Noise Contrastive Estimation from the Perspective of Asymptotic Variance},
 	author       = {M. Uehara and T. Matsuda and F. Komaki},
@@ -221,6 +227,13 @@
 	publisher    = {PMLR},
 	volume       = 180,
 	pages        = {307--316}
+}
+@misc{chehab2022nceoptimaljmlr,
+  author = {O. Chehab and A. Gramfort and A. Hyv{\"a}rinen},  
+  title = {Optimizing the Noise in Self-Supervised Learning: from Importance Sampling to Noise-Contrastive Estimation},
+  publisher = {arXiv},
+  year = {2023},
+  copyright = {arXiv.org perpetual, non-exclusive license}
 }
 @inproceedings{lee2022ncegaussiannoise,
 	title        = {Pitfalls of Gaussians as a noise distribution in {NCE}},
@@ -407,6 +420,35 @@
 %
 % NCE: annealing
 %
+@article{meng1996isbridgeempirical,
+	title        = {Fitting Full-Information Item Factor Models and an Empirical Investigation of Bridge Sampling},
+	author       = {X.-L. Meng and S. Schilling},
+	year         = 1996,
+	journal      = {Journal of the American Statistical Association},
+	publisher    = {Taylor & Francis},
+	volume       = 91,
+	number       = 435,
+	pages        = {1254--1267}
+}
+@article{torrie1977isumbrella,
+	title        = {Nonphysical sampling distributions in Monte Carlo free-energy estimation: Umbrella sampling},
+	author       = {G.M. Torrie and J.P. Valleau},
+	year         = 1977,
+	journal      = {Journal of Computational Physics},
+	volume       = 23,
+	number       = 2,
+	pages        = {187--199}
+}
+@article{chen1997isratio,
+	title        = {On Monte Carlo Methods for Estimating Ratios of Normalizing Constants},
+	author       = {M.-H. Chen and Q.-M. Shao},
+	year         = 1997,
+	journal      = {The Annals of Statistics},
+	publisher    = {Institute of Mathematical Statistics},
+	volume       = 25,
+	number       = 4,
+	pages        = {1563--1594}
+}
 @inproceedings{rhodes2020bridgedre,
 	title        = {Telescoping Density-Ratio Estimation},
 	author       = {B. Rhodes and K. Xu and M.U. Gutmann},
@@ -516,6 +558,8 @@
 % Statistical Models
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %
+% Change-of-variable models that have a tractable determinant
+%
 @article{papamakarios2021normalizingflows,
 	title        = {Normalizing Flows for Probabilistic Modeling and Inference},
 	author       = {G. Papamakarios and E. Nalisnick and D.J. Rezende and S. Mohamed and B. Lakshminarayanan},
@@ -524,6 +568,25 @@
 	volume       = 22,
 	number       = 57,
 	pages        = {1--64}
+}
+%
+% Exponential Families
+%
+@article{sriperumbudur2017exponentialfamilyuniversality,
+  author  = {B. Sriperumbudur and K. Fukumizu and A. Gretton and A. Hyv\"{a}rinen and R. Kumar},
+  title   = {Density Estimation in Infinite Dimensional Exponential Families},
+  journal = {Journal of Machine Learning Research},
+  year    = {2017},
+  volume  = {18},
+  number  = {57},
+  pages   = {1--59},
+}
+@misc{nielsen2011exponentialfamilyreview,
+      title={Statistical exponential families: A digest with flash cards}, 
+      author={F. Nielsen and V. Garcia},
+      year={2011},
+      eprint={0911.4863},
+      archivePrefix={arXiv},
 }
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1083,4 +1146,232 @@
 	author       = {A. Owens},
 	year         = 2017,
 	howpublished = {\url{https://artowen.su.domains/pubtalks/AdaptiveISweb.pdf}}
+}
+
+
+
+
+@book{fdivnotespolyanskiy,
+	title        = {Information Theory: From Coding to Learning},
+	author       = {Y. Polyanskiy and Y. Wu},
+	year         = 2022,
+	publisher    = {Cambridge University Press},
+}
+%
+% Diffusion models
+% sort through their contributions
+%
+@inproceedings{sohldickstein2015diffusion,
+	title        = {Deep Unsupervised Learning using Nonequilibrium Thermodynamics},
+	author       = {J. Sohl-Dickstein and E. Weiss and N. Maheswaranathan S. Ganguli},
+	year         = 2015,
+	booktitle    = {International Conference on Machine Learning (ICML)},
+	publisher    = {PMLR},
+	volume       = 37,
+	pages        = {2256--2265}
+}
+@misc{song2020diffusion,
+	title        = {Denoising Diffusion Implicit Models},
+	author       = {J. Song and C. Meng and S. Ermon},
+	year         = 2020,
+	publisher    = {arXiv},
+	doi          = {10.48550/ARXIV.2010.02502}
+}
+@inproceedings{ho2020diffusion,
+	title        = {Denoising Diffusion Probabilistic Models},
+	author       = {J. Ho and A. Jain and P. Abbeel},
+	year         = 2020,
+	booktitle    = {Advances in Neural Information Processing Systems (NeurIPS)},
+	publisher    = {Curran Associates, Inc.},
+	volume       = 33,
+	pages        = {6840--6851}
+}
+@inproceedings{kingma2021diffusion,
+	title        = {Variational Diffusion Models},
+	author       = {D. Kingma and T. Salimans and B. Poole and J. Ho},
+	year         = 2021,
+	booktitle    = {Advances in Neural Information Processing Systems (NeurIPS)},
+	publisher    = {Curran Associates, Inc.},
+	volume       = 34,
+	pages        = {21696--21707}
+}
+@article{gu2022diffusion,
+	title        = {f-DM: A Multi-stage Diffusion Model via Progressive Signal Transformation},
+	author       = {J. Gu and S. Zhai and Y. Zhang and M.-A. Bautista and J. Susskind},
+	year         = 2022,
+	journal      = {arXiv preprint}
+}
+@misc{chen2023diffusion,
+	title        = {On the Importance of Noise Scheduling for Diffusion Models},
+	author       = {T. Chen},
+	year         = 2023,
+	publisher    = {arXiv},
+	doi          = {10.48550/ARXIV.2301.10972}
+}
+@misc{hoogeboom2023diffusion,
+	title        = {simple diffusion: End-to-end diffusion for high resolution images},
+	author       = {Hoogeboom, Emiel and Heek, Jonathan and Salimans, Tim},
+	year         = 2023,
+	publisher    = {arXiv},
+	doi          = {10.48550/ARXIV.2301.11093}
+}
+@article{wang2022bridge,
+	title        = {Warp Bridge Sampling: The Next Generation},
+	author       = {L. Wang and D.E. Jones and X.-L. Meng},
+	year         = 2022,
+	journal      = {Journal of the American Statistical Association},
+	publisher    = {Taylor & Francis},
+	volume       = 117,
+	number       = 538,
+	pages        = {835--851}
+}
+@article{malago2015gaussianfisher,
+	title        = {Information Geometry of the Gaussian Distribution in View of Stochastic Optimization},
+	author       = {L. Malag{\`o} and G. Pistone},
+	year         = 2015,
+	journal      = {Proceedings of the 2015 ACM Conference on Foundations of Genetic Algorithms XIII}
+}
+% Geometric path
+@inproceedings{salakhutdinov2008geometricpath,
+	title        = {On the Quantitative Analysis of Deep Belief Networks},
+	author       = {Salakhutdinov, R. and Murray, I.},
+	year         = 2008,
+	publisher    = {Association for Computing Machinery},
+	series       = {International Conference on Machine Learning (ICML)},
+	pages        = {872–879}
+}
+@inproceedings{salakhutdinov2009geometricpath,
+	title        = {Deep Boltzmann Machines},
+	author       = {Salakhutdinov, R. and Hinton, G.},
+	year         = 2009,
+	booktitle    = {International Conference on Artificial Intelligence and Statistics (AISTATS)},
+	publisher    = {PMLR},
+	volume       = 5,
+	pages        = {448--455}
+}
+@inproceedings{dauphin2013stochasticratiomatching,
+	title        = {Stochastic Ratio Matching of RBMs for Sparse High-Dimensional Inputs},
+	author       = {Dauphin, Y. and Bengio, Y.},
+	year         = 2013,
+	booktitle    = {Advances in Neural Information Processing Systems (NIPS)},
+	publisher    = {Curran Associates, Inc.},
+	volume       = 26,
+	pages        = {}
+}
+@article{ellam2017determinant,
+	title        = {A determinant‐free method to simulate the parameters of large Gaussian fields},
+	author       = {L. Ellam and H. Strathmann and M.A. Girolami and I. Murray},
+	year         = 2017,
+	journal      = {Stat},
+	volume       = 6,
+	pages        = {271--281}
+}
+@book{amari2000infogeometry,
+	title        = {Methods of information geometry},
+	author       = {Amari, S.-I. and Nagaoka, H.},
+	year         = 2000,
+	publisher    = {AMS}
+}
+@InProceedings{masrani2021annealedisqpath,
+  title = 	 {q-Paths: Generalizing the geometric annealing path using power means},
+  author =       {Masrani, V. and Brekelmans, R. and Bui, T. and Nielsen, F. and Galstyan, A. and Ver Steeg, G. and Wood, F.},
+  booktitle = 	 {Conference on Uncertainty in Artificial Intelligence (UAI)},
+  pages = 	 {1938--1947},
+  year = 	 {2021},
+  volume = 	 {161},
+  month = 	 {27--30 Jul},
+  publisher =    {PMLR},
+}
+@inproceedings{hyvarinen2009naturalimages,
+  title={Natural Image Statistics - A Probabilistic Approach to Early Computational Vision},
+  author={A. Hyv{\"a}rinen and J. Hurri and P.O. Hoyer},
+  booktitle={Computational Imaging and Vision},
+  year={2009}
+}
+@article{hesterberg1995bridgemixture,
+ author = {T. Hesterberg},
+ journal = {Technometrics},
+ number = {2},
+ pages = {185--194},
+ publisher = {[American Statistical Association, Taylor & Francis, Ltd.]},
+ title = {Weighted Average Importance Sampling and Defensive Mixture Distributions},
+ volume = {37},
+ year = {1995}
+}
+@article{owen2000bridgemixture,
+ author = {A. Owen and Y. Zhou},
+ journal = {Journal of the American Statistical Association},
+ number = {449},
+ pages = {135--143},
+ publisher = {[American Statistical Association, Taylor & Francis, Ltd.]},
+ title = {Safe and Effective Importance Sampling},
+ volume = {95},
+ year = {2000}
+}
+@article{datasetcifar10,
+title= {CIFAR-10 (Canadian Institute for Advanced Research)},
+journal= {},
+author= {A. Krizhevsky and V. Nair and G. Hinton},
+year= {},
+}
+@inproceedings{cao2022optimalflowis,
+ author = {Cao, Y. and Vanden-Eijnden, E.},
+ booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+ pages = {12352--12364},
+ publisher = {Curran Associates, Inc.},
+ title = {Learning Optimal Flows for Non-Equilibrium Importance Sampling},
+ volume = {35},
+ year = {2022}
+}
+@inproceedings{masrani2019thermodynamic,
+  title={The Thermodynamic Variational Objective},
+  author={V. Masrani and T.A. Le and F.D. Wood},
+  booktitle={Neural Information Processing Systems (NeurIPS)},
+  year={2019}
+}
+@misc{dickstein2012hamiltonianais,
+      title={Hamiltonian Annealed Importance Sampling for partition function estimation}, 
+      author={J. Sohl-Dickstein and B.J. Culpepper},
+      year={2012},
+      archivePrefix={arXiv},
+}
+@inproceedings{ding2020annealedais,
+  title={Learning Deep Generative Models with Annealed Importance Sampling},
+  author={X. Ding, D. Freedman},
+  booktitle={Neural Information Processing Systems (NeurIPS)},
+  booksubtitle = {Third Workshop on Machine Learning and the Physical Sciences},
+  year={2020}
+}
+@inproceedings{doucet2022aisscorematching,
+ author = {Doucet, A. and Grathwohl, W. and Matthews, A. and Strathmann, H.},
+ booktitle = {Neural Information Processing Systems (NeurIPS)},
+ pages = {21482--21494},
+ publisher = {Curran Associates, Inc.},
+ title = {Score-Based Diffusion meets Annealed Importance Sampling},
+ volume = {35},
+ year = {2022}
+}
+@inproceedings{salakhutdinov2009ais,
+  title={Replicated Softmax: an Undirected Topic Model},
+  author={R. Salakhutdinov and G. Hinton},
+  booktitle={Neural Information Processing Systems (NIPS)},
+  year={2009}
+}
+@inproceedings{dauphin2013ais,
+ author = {Dauphin, Y. and Bengio, Y.},
+ booktitle = {Neural Information Processing Systems (NIPS)},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Stochastic Ratio Matching of RBMs for Sparse High-Dimensional Inputs},
+ volume = {26},
+ year = {2013}
+}
+@InProceedings{nichol2021diffusionschedule,
+  title = 	 {Improved Denoising Diffusion Probabilistic Models},
+  author =       {Nichol, A.Q. and Dhariwal, P.},
+  booktitle = 	 {International Conference on Machine Learning (ICML)},
+  pages = 	 {8162--8171},
+  year = 	 {2021},
+  volume = 	 {139},
+  month = 	 {18--24 Jul},
 }

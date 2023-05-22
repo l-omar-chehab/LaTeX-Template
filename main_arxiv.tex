@@ -1,11 +1,11 @@
 \documentclass[11pt]{article}
 
 % Style package (arxiv or publication)
-\usepackage{arxiv}
+\usepackage{./style/arxiv}
 
 % Convenient commands: for math
-\input{math_commands.tex}
-\input{math_commands_arxiv_only.tex}
+\input{commands/math_commands.tex}
+\input{commands/math_commands_arxiv_only.tex}
 
 % Convenient commands: for editing
 \newcommand{\omar}[1]{\textcolor{blue}{#1}}
@@ -31,7 +31,7 @@
 \maketitle
 
 \begin{abstract}
-    \input{01_abstract.tex}
+    \input{content/01_abstract}
     \noindent \textbf{Keywords}:
     Energy-Based Models, Contrastive Learning, Noise-Contrastive Estimation, Self-Supervised Learning, Estimation Theory, Importance Sampling
 \end{abstract}
@@ -43,14 +43,14 @@
 
 
 % Sections
-\input{02_intro.tex}
-\input{03_background.tex}
-\input{04_theory.tex}
-\input{05_experiment.tex}
-\input{06_discussion.tex}
+\input{content/02_intro}
+\input{content/03_background}
+\input{content/04_theory}
+\input{content/05_experiment}
+\input{content/06_discussion}
 
 \subsubsection*{Acknowledgements}
-\input{07_acknowledgements.tex}
+\input{content/07_acknowledgements}
 
 
 % Bibliography
@@ -60,12 +60,12 @@
 
 % Appendix
 \newpage
-\input{08_appendix.tex}
+\input{content/08_appendix}
 
 
 % Pointers on writing a good paper
 \newpage
-\input{98_pointers.tex}
+\input{content/98_pointers}
 
 
 \end{document}
